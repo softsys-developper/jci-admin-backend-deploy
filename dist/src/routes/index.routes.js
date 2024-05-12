@@ -1,0 +1,47 @@
+"use strict";
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express = __importStar(require("express"));
+const router = express.Router();
+const auth_routes_1 = require("./auth.routes");
+const global_routes_1 = require("./global.routes");
+const banner_routes_1 = require("./banner.routes");
+const pasts_routes_1 = require("./pasts.routes");
+const teams_routes_1 = require("./teams.routes");
+const contact_routes_1 = require("./contact.routes");
+const activite_routes_1 = require("./activite.routes");
+const user_routes_1 = require("./user.routes");
+const routes = (app) => {
+    (0, user_routes_1.userRoutes)(router);
+    (0, auth_routes_1.AuthRoutes)(router); // Auth Route
+    (0, global_routes_1.GlobalRoutes)(router);
+    (0, banner_routes_1.BannerRoutes)(router);
+    (0, pasts_routes_1.PastPresidentRoutes)(router);
+    (0, teams_routes_1.TeamsRoutes)(router);
+    (0, contact_routes_1.ContactRoutes)(router);
+    (0, activite_routes_1.ActiviteRoutes)(router);
+    app.use('/api/', router);
+};
+exports.default = routes;

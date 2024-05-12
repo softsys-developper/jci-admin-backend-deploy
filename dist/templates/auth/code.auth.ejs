@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Document</title>
+   </head>
+   <style>
+
+@font-face {
+  font-family: Figtree;
+  src: url('https://fonts.googleapis.com/css2?family=Figtree:wght@300;500;900&display=swap');
+}
+      .main{
+         width: 100%;
+         font-family: Figtree, 'Segoe UI', Tahoma, Verdana, sans-serif;
+      }
+
+     .main .contain{
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      width: 70%;
+      margin: 0 auto;
+     }
+
+     .containe {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+     }
+
+     .main .contain .logo{
+      width: 64px;
+      height: 64px;
+     }
+
+     .main .contain .logo img{
+      width: 100%;
+      height: 100%;
+     }
+
+     .code_and_time{
+      display: flex;
+      flex-direction: column;
+     }
+     .code{
+      font-size: 32px;
+      font-weight: 900;
+     }
+     .time{
+      font-size: 14px;
+     }
+
+   </style>
+   <body>
+      <div class="main">
+         <div class="contain">
+            <div class="logo">
+               <img src="http://localhost:5173/logos/dlx.png" alt="" />
+            </div>
+   
+            <div class="containe">
+               <!-- Explain -->
+               <span class="text-3xl font-bold underline">
+                  Saisissez le code à 6 chiffres ci-dessous pour vérifier votre
+                  identité et récupérer l’accès à votre compte Likidons.
+               </span>
+   
+               <!-- Code and time info -->
+               <div class="code_and_time" >
+                  <span class="code"> <%= code %> </span>
+                  <!-- <span class="time">Ce code de verification exprire dans 15 minute.</span> -->
+               </div>
+   
+               <div class="" style="display: flex; flex-direction: column;">
+                  <span>
+                     Merci de nous aider à préserver la sécurité de votre compte.
+                  </span>
+                  <span style="margin-top: 2rem;">L’équipe Likidons</span>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
