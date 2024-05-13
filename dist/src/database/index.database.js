@@ -2,10 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.dbx = void 0;
 const env_config_1 = require("../config/env.config");
-const parametreNotification_1 = require("../models/parametreNotification");
-const parametrePreference_1 = require("../models/parametrePreference");
 const user_1 = require("../models/user");
-const userRole_1 = require("../models/userRole");
 const typeorm_1 = require("typeorm");
 const activites_1 = require("../models/activites");
 const blogs_1 = require("../models/blogs");
@@ -28,9 +25,6 @@ exports.dbx = new typeorm_1.DataSource({
     logging: false,
     entities: [
         user_1.User,
-        userRole_1.UserRole,
-        parametreNotification_1.ParametreNotification,
-        parametrePreference_1.ParametrePreference,
         activites_1.Activites,
         activites_media_1.ActiviteMedia,
         blogs_1.Blogs,

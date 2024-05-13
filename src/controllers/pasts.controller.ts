@@ -1,11 +1,7 @@
 import { Response, Request } from 'express';
 import serverError from '../utils/err/server.error';
 import userServices from '../services/user.services';
-import pagination from 'prisma-extension-pagination';
 import { DbList } from '../database/list.database';
-import { ILike, Not } from 'typeorm';
-import { User } from './../models/user';
-import { PaginateService } from '../services/paginate.services';
 import { env } from '../config/env.config';
 
 class PastsController {

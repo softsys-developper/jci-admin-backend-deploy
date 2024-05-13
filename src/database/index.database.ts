@@ -1,10 +1,6 @@
 import { env } from '../config/env.config';
 
-import { ParametreNotification } from '../models/parametreNotification';
-import { ParametrePreference } from '../models/parametrePreference';
-
 import { User } from '../models/user';
-import { UserRole } from '../models/userRole';
 import { DataSource } from 'typeorm';
 import { Activites } from '../models/activites';
 import { Blogs } from '../models/blogs';
@@ -29,9 +25,6 @@ export const dbx = new DataSource({
    logging: false,
    entities: [
       User,
-      UserRole,
-      ParametreNotification,
-      ParametrePreference,
       Activites,
       ActiviteMedia,
       Blogs,

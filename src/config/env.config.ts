@@ -1,4 +1,4 @@
-export const MODE_APP: any = 'dev';
+export const MODE_APP: any = 'prod';
 const MODE_APP_DEFINED = (Developpement:any, Production:any) => {
    return MODE_APP === 'dev' ? Developpement : Production
 }

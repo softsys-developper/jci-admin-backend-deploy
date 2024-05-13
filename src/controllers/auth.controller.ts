@@ -6,7 +6,6 @@ import bcrypt from 'bcrypt';
 import Jwt from 'jsonwebtoken';
 import userServices from '../services/user.services';
 import { DbList } from '../database/list.database';
-import AuthMailer from '../mail//auth.mailer';
 import crypto from 'crypto';
 import { env } from '../config/env.config';
 

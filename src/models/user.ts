@@ -12,7 +12,7 @@ import {
    ManyToOne,
 } from 'typeorm';
 
-import { UserRole } from './userRole';
+
 import { Activites } from './activites';
 import { Banners } from './banners';
 import { Blogs } from './blogs';

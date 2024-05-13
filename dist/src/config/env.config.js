@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.env = exports.MODE_APP = void 0;
-exports.MODE_APP = 'dev';
+exports.MODE_APP = 'prod';
 const MODE_APP_DEFINED = (Developpement, Production) => {
     return exports.MODE_APP === 'dev' ? Developpement : Production;
 };
