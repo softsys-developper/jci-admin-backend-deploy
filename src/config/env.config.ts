@@ -1,4 +1,4 @@
-export const MODE_APP: any = 'dev';
+export const MODE_APP: any = 'prod';
 const MODE_APP_DEFINED = (Developpement:any, Production:any) => {
    return MODE_APP === 'dev' ? Developpement : Production
 }
@@ -8,9 +8,9 @@ export const env = {
    SECRET_KEY_MAIL: process.env.SECRET_KEY_MAIL,
 
    HOST_CLIENT: MODE_APP_DEFINED('http://localhost:5173', 'https://jci.com'),
-   HOST_SERVER: MODE_APP_DEFINED('http://localhost:8080/api/', 'https://api_admin.jci.ci/api'),
-   HOST_PROVIDERS: MODE_APP_DEFINED('http://localhost:8080/i-providers', 'https://api_admin.jci.ci/i-providers'),
-   HOST_CLIENT_IMAGE: MODE_APP_DEFINED('http://localhost:8080/i-images/storage', 'https://api_admin.jci.ci/i-images/storage'),
+   HOST_SERVER: MODE_APP_DEFINED('http://localhost:8080/api/', 'https://api.jci.ci/api'),
+   HOST_PROVIDERS: MODE_APP_DEFINED('http://localhost:8080/i-providers', 'https://api.jci.ci/i-providers'),
+   HOST_CLIENT_IMAGE: MODE_APP_DEFINED('http://localhost:8080/i-images/storage', 'https://api.jci.ci/i-images/storage'),
    PORT: MODE_APP_DEFINED(process.env.PORT_LOCAL, process.env.PORT),
 
 

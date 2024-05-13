@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.env = exports.MODE_APP = void 0;
-exports.MODE_APP = 'dev';
+exports.MODE_APP = 'prod';
 const MODE_APP_DEFINED = (Developpement, Production) => {
     return exports.MODE_APP === 'dev' ? Developpement : Production;
 };
@@ -9,9 +9,9 @@ exports.env = {
     SECRET_KEY_TOKEN: process.env.SECRET_KEY_TOKEN,
     SECRET_KEY_MAIL: process.env.SECRET_KEY_MAIL,
     HOST_CLIENT: MODE_APP_DEFINED('http://localhost:5173', 'https://jci.com'),
-    HOST_SERVER: MODE_APP_DEFINED('http://localhost:8080/api/', 'https://api_admin.jci.ci/api'),
-    HOST_PROVIDERS: MODE_APP_DEFINED('http://localhost:8080/i-providers', 'https://api_admin.jci.ci/i-providers'),
-    HOST_CLIENT_IMAGE: MODE_APP_DEFINED('http://localhost:8080/i-images/storage', 'https://api_admin.jci.ci/i-images/storage'),
+    HOST_SERVER: MODE_APP_DEFINED('http://localhost:8080/api/', 'https://api.jci.ci/api'),
+    HOST_PROVIDERS: MODE_APP_DEFINED('http://localhost:8080/i-providers', 'https://api.jci.ci/i-providers'),
+    HOST_CLIENT_IMAGE: MODE_APP_DEFINED('http://localhost:8080/i-images/storage', 'https://api.jci.ci/i-images/storage'),
     PORT: MODE_APP_DEFINED(process.env.PORT_LOCAL, process.env.PORT),
     // Database 
     DB_HOST: MODE_APP_DEFINED('localhost', process.env.DB_HOST),
