@@ -62,7 +62,7 @@ app.set('view engine', 'ejs');
 InitRoutes(app);
 
 app.get('', async (req: Request, res: Response) => {
-   res.send('Api Likidons...');
+   res.send('Api Jci...');
 });
 
 // Database Connected

@@ -41,7 +41,6 @@ export const dbx = new DataSource({
       Banners,
       PastsPresidents,
       Teams
-
    ],
    subscribers: [],
    migrations: [],
